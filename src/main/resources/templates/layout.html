@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="htmlhead">
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap-glyphicons/bdd2cbfba0/css/bootstrap-glyphicons.css}" />
+        <link rel="stylesheet" th:href="@{/site.css}" />
+    </head>
+    
+    <body>
+      <nav th:fragment="menu" class="navbar container-xxl navbar-expand-lg ">
+          <div class="ABC" >
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a th:href="@{/home/}" class="nav-link" href="/">Biblioteca Pessoal</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a th:href="@{/home/}" class="nav-link" href="/">Biblioteca</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a th:href="@{/queroLer/}" class="nav-link" href="/">Quero ler</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a th:href="@{/estouLendo/}" class="nav-link" href="/">Estou lendo</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a th:href="@{/lidos/}" class="nav-link" href="/">Lidos</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a th:href="@{/usuario/}" class="nav-link" href="/">Emprestimos</a>
+                </li>
+              </ul>
+          </div>
+      </nav>
+      <div class= "container">
+        
+        <form method="POST" class="mt-1">
+            <label class="text ml-2">Pesquisar</label>
+            <input name="pesquisar" type="text" class="input-text ml-1" style="width : 30vw;">
+            <button class="btn-complementary-md ml-1">Pesquisar</button>
+        </form>
+  
+      </div>
+         
+        <div th:fragment="footer" id="footer">
+            <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+            <script th:src="@{/webjars/bootbox.js/4.4.0/bootbox.js}"></script>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+<!-- 
+    1. Como registrar a adata atual do cadastro do usuário
+    2.
+ -->

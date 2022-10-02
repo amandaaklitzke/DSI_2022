@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+    <head th:include="layout :: htmlhead"></head>
+
+    <body class="d-flex justify-content-center align-items-center">
+        <nav th:replace="layout :: menu">(menu)</nav>
+        <div class="container">
+            <form th:action="@{/perquisa/(form)}" th:object="${pesquisa}" method="POST" >
+                <label class="text ml-2">Pesquisar Livro</label>
+                <input name="pesquisa" type="text" class="input-text ml-1" style="width : 30vw;">
+                <button class="btn-complementary-md ml-1">Pesquisar</button>
+
+            </form>
+        </div>
+        <div th:include="layout :: footer">(footer)</div>
+        
+    </body>
+</html>
