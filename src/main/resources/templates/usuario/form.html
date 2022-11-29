@@ -15,27 +15,27 @@
                     <label for="txtnome" >Nome</label>
                            
                 </div>
-                <div class="form-floating m-3">
-                    
+                <!-- <div class="form-floating m-3">
                     <input class="form-control" type="text" id="txtsobrenome" th:field="*{sobrenome}" placeholder="Sobrenome do Usuário"
                     pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="sobrenome" required>
                     <label for="txtsobrenome">Sobrenome</label>
-                </div>
+                </div> -->
                 <div class="form-floating m-3">
-                    
                     <input class="form-control" type="date" id="txtdataNascimento" th:field="*{dataNascimento}" name="dataNascimento" required>
                     <label for="txtdataNascimento"></label>    
                 </div>
                 <div class="form-floating m-3">
-                    
                     <input class="form-control" type="email" id="txtemail" th:field="*{email}" 
                     placeholder="Email"name="email" required>
                     <label for="txtemail">Email</label>
                 </div>
-                <!-- <div class="form-group">
-                    <label for="txtdatacriacao">Data de Criação</label>
-                    <input class="form-control" type="date" id="txtdatacriacao" th:field="*{dataCriacao}">      
-                </div> -->
+
+                <div class="form-floating m-3">
+                    <input class="form-control" type="password" id="txtsenha" th:field="*{senha}" placeholder="Senha" 
+                        pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="senha" required>
+                    <label for="txtsenha" >Senha</label>
+                           
+                </div>
                 <div class="form-floating m-3">
                     <input type="submit" value="Enviar" class="form-control p-2" 
                         style="font-weight: bold; font-size: 25px ; 

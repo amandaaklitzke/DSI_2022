@@ -6,7 +6,7 @@ import javax.persistence.Column;
 
 public class TipoObra {
     @Id
-    private long idTipoObra; // >>>>>>>>>>>Apenas um check ao tipo de obra como manga, livro, hq
+    private long idTipoObra; // >>>>>>>>>>>Apenas um check ao tipo de obra como manga, livro, hq, manga manhwa manhua
     @Column(length = 500)
     private String nomeTipoObra;
 

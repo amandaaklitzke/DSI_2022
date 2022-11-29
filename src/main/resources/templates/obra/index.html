@@ -7,31 +7,36 @@
     <body>
         <nav th:replace="layout :: menu">(menu)</nav>
         <div class="container">
-           <a th:href="@{/usuario/novo}" class="btn btn-primary">Novo</a>
-            <table class="table" id="usuarios">
+           <a th:href="@{/usuario/novo}" class="btn btn-primary">Nova Obra</a>
+            <table class="table" id="obra">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Usuario</th>
-                        <th>Nome</th>
-                        <th>Data de Nascimento</th>
-                        <th>E-mail</th>
-                        <th>Senha</th>
+                        <th>Obra</th>
+                        <th>SubTitulo</th>
+                        <th>Ano de Publicação</th>
+                        <th>autor</th>
+                        <th>Quantidade de páginas</th>
+                        <th>Sinopse</th>
+                        <th>Pais de Origem</th>
+                        <th>Tipo</th>
                     </tr>
                 </thead>
                 <thead>
-                    <tr th:each="umUsuario : ${listaUsuarios}">
-                        <td th:text="${umUsuario.id}"></td>
-                        <td th:text="${umUsuario.usuario}"></td>
-                        <td th:text="${umUsuario.nome}"></td>
-                        <td th:text="${umUsuario.dataNascimento}"></td>
-                        <td th:text="${umUsuario.email}"></td>
-                        <td th:text="${umUsuario.senha}"></td>
+                    <tr th:each="umaObra : ${listaObras}">
+                        <td th:text="${umaObra.idObra}"></td>
+                        <td th:text="${umaObra.obra}"></td>
+                        <td th:text="${umaObra.subTitulo}"></td>
+                        <td th:text="${umaObra.anoPublicacao}"></td>
+                        <td th:text="${umaObra.autor}"></td>
+                        <td th:text="${umaObra.sinopseObra}"></td>
+                        <td th:text="${umaObra.paisOrigemObra}"></td>
+                        <td th:text="${umaObra.tipo}"></td>
                         <td><a th:href=
-                            "@{'/usuario/alterar/' + ${umUsuario.id}}"
+                            "@{'/usuario/alterar/' + ${umaObra.idObra}}"
                             class="btn btn-primary"> Alterar</a>
                             <button class="btn btn-danger js-delete"
-                            th:data-id="${umUsuario.id}">Excluir
+                            th:data-id="${umaObra.idObra}">Excluir
                             </button>
                         </td>
                     </tr>

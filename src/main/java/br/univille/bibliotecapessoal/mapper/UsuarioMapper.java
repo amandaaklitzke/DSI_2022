@@ -1,7 +1,9 @@
 package br.univille.bibliotecapessoal.mapper;
 
 import java.util.List;
+
 import org.mapstruct.Mapper;
+
 import br.univille.bibliotecapessoal.dto.UsuarioDto;
 import br.univille.bibliotecapessoal.entity.Usuario;
 

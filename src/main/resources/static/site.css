@@ -3,13 +3,34 @@ body{
     background-color: #ebebeb;
     color: black;
 }
-.ABC{
-    font-size: 2vw;
+.div-externa-nav{
     display: flex;
+    width: 100%;
+    margin-left: 5vw;
+    
     align-content: space-between;
+}
+.div-interna-nav{
+    font-size: 2vw;
+    margin: 10px 24px;    
+    text-decoration: none;
+}
+.text{
+    text-decoration: none;
+    color: black;
+}
+.text:hover{
+    text-decoration: none;
+    color: gray;
 }
 /* .navbar-nav{
     font-size: 2vw;
     display: flex;
     align-content: space-between;
 } */
+
+.dropdown-menu {
+    display: block !important;
+}
+
+/* style="font-family: architects-daughter, cursive;" */

@@ -1,74 +1,38 @@
 package br.univille.bibliotecapessoal.dto;
-
+import java.util.ArrayList;
 import java.util.Date;
-
-import org.springframework.format.annotation.DateTimeFormat;
+import java.util.List;
+// import org.springframework.format.annotation.DateTimeFormat;
+import br.univille.bibliotecapessoal.entity.Papel;
 
 public class UsuarioDto {
-    private String nome;
-    private String sobrenome;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date dataNascimento;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date dataCriacao;
-    private String email;
+
     private long id;
+    private String usuario;
     private String senha;
+    private String nome;
+    private Date dataNascimento;
+    private String email;
+    private List<Papel> listaPapeis = new ArrayList<>();
+    public List<Papel> getListaPapeis() {return listaPapeis;}
+    public void setListaPapeis(List<Papel> listaPapeis) {this.listaPapeis = listaPapeis;}
+    
+    public long getId() {return id;}
+    public void setId(long id) {this.id = id;}
+    
+    public String getUsuario() {return usuario;}
+    public void setUsuario(String usuario) {this.usuario = usuario;}
 
-    public String getSenha() {
-        return senha;
-    }
+    public String getSenha() {return senha;}
+    public void setSenha(String senha) {this.senha = senha; }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    public Date getDataNascimento() {return dataNascimento;}
+    public void setDataNascimento(Date dataNascimento) {this.dataNascimento = dataNascimento;}
 
-    public long getId() {
-        return id;
-    }
+    public String getEmail() {return email;}
+    public void setEmail(String email) {this.email = email;}
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public Date getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(Date dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public String getNome() {return nome;}
+    public void setNome(String nome) {this.nome = nome;}
 
 }

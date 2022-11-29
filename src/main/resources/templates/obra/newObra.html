@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+    <head th:include="layout :: htmlhead"></head>
+
+    <body>
+        <nav th:replace="layout :: menu">(menu)</nav>
+        <div class="container" style="max-width: 40rem;" >
+            <form th:action="@{/usuario/(form)}" th:object="${usuario}" method="POST" >
+                <input type="hidden" th:field="*{id}">
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txttituloObra" th:field="*{tituloObra}" placeholder="Título da Obra" 
+                        pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="tituloObra" required>
+                    <label for="txttituloObra">Título</label>    
+                </div>
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txtsubtituloObra" th:field="*{subtituloObra}" placeholder="Subtítulo da Obra" 
+                        pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="subtituloObra" required>
+                    <label for="txtsubtituloObra">Subtítulo</label>    
+                </div>
+                <div class="form-floating m-3">
+                    <input class="form-control" type="date" id="txtanoPublicacao" th:field="*{anoPublicacao}" name="anoPublicacao" required>
+                    <label for="txtanoPublicacao"></label>    
+                </div>
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txtautor" th:field="*{autor}" placeholder="Autor"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="autor" required>
+                    <label for="txtautor">Autor</label>
+                </div>
+                
+                <div class="form-floating m-3">
+                    <input class="form-control" type="number" id="txtquantPg" th:field="*{quantPg}" placeholder="Quantidade de páginas"
+                    pattern="(^[0-9]+$)" name="quantPg" required>
+                    <label for="txtquantPg">Quantidade de páginas</label>
+                </div>
+               
+                <div class="form-floating m-3">
+                    <textarea class="form-control" type="text" id="txtsinopse" th:field="*{sinopse}"  rows="9" cols="50" placeholder="Sinopse"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="sinopse" required></textarea>
+                    <label for="txtautor">txtsinopse</label>
+                </div>
+
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txtpaisOrigemObra" th:field="*{paisOrigemObra}" placeholder="Pais de Origem da Obra"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="paisOrigemObra" required>
+                    <label for="txtpaisOrigemObra">Pais de Origem da Obra</label>
+                </div>
+
+
+                <div class="form-floating m-3">
+                    <!-- <input class="form-control" type="text" id="txtautor" th:field="*{autor}" placeholder="Autor"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="autor" required> -->
+                    <select class="form-select" name="tipo" id="tipo" id="txttipo" required>
+                        <option value=0 disabled>Selecione o tipo de obra</option>
+                        <option value="livro">livro</option>
+                        <option value="HQ">Historia em Quadrinho(HQ)</option>
+                        <option value="manga">Manga</option>
+                        <option value="manhwas">Manhwas</option>
+                        <option value="manhua">manhua</option>
+                    </select>
+                    <label for="txttipo">Selecione o tipo de obra:</label>
+                </div>             
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txtgeneroObra" th:field="*{generoObra}" placeholder="Gênero"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="generoObra" required>
+                    <label for="txtgeneroObra">Gênero</label>
+                </div>
+                
+                <div class="form-floating m-3">
+                    <input class="form-control" type="text" id="txtidioma" th:field="*{idioma}" placeholder="Idioma"
+                    pattern="(^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ 0-9]+$)" name="idioma" required>
+                    <label for="txtidioma">Idioma</label>
+                </div>
+
+                <div class="form-floating m-3">
+                    <input type="submit" value="Adicionar" class="form-control p-2" 
+                        style="font-weight: bold; font-size: 25px ; 
+                        max-width: 20rem; margin: auto; ">
+                </div>
+
+            </form>
+
+        </div>
+
+        <div th:include="layout :: footer">(footer)</div>
+        
+    </body>
+</html>

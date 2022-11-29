@@ -1,46 +1,74 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="htmlhead">
+        
         <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" />
         <link rel="stylesheet" th:href="@{/webjars/bootstrap-glyphicons/bdd2cbfba0/css/bootstrap-glyphicons.css}" />
         <link rel="stylesheet" th:href="@{/site.css}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https: //fonts.googleapis.com/css2?family= Architects+Daughter & display = swap" rel="stylesheet">
     </head>
     
     <body>
       <nav th:fragment="menu" class="navbar container-xxl navbar-expand-lg ">
-          <div class="ABC" >
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a th:href="@{/home/}" class="nav-link" href="/">Biblioteca Pessoal</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a th:href="@{/home/}" class="nav-link" href="/">Biblioteca</a>
-                  </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a th:href="@{/queroLer/}" class="nav-link" href="/">Quero ler</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a th:href="@{/estouLendo/}" class="nav-link" href="/">Estou lendo</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a th:href="@{/lidos/}" class="nav-link" href="/">Lidos</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a th:href="@{/usuario/}" class="nav-link" href="/">Emprestimos</a>
-                </li>
-              </ul>
+        
+          <div th:href="@{/home/}">
+            <img src="logo3.png"  width="250px" height="98px">
+            <!-- <a  th:href="@{/home/}" class="nav-link" href="/">Biblioteca Pessoal</a> -->
           </div>
+        <div class="div-externa-nav" >                
+          <div class="div-interna-nav" >
+              <a class="text" th:href="@{/home/}" href="/">Biblioteca</a>
+          </div>
+          <div class="div-interna-nav" >
+              <a class="text" th:href="@{/queroLer/}" href="/">Quero ler</a>
+            </div>
+          <div class="div-interna-nav" >
+              <a class="text" th:href="@{/estouLendo/}" href="/">Estou lendo</a>
+            </div>
+          <div class="div-interna-nav" >
+              <a class="text" th:href="@{/lidos/}" href="/">Lidos</a>
+            </div>
+          <div class="div-interna-nav" >
+              <a class="text" th:href="@{/usuario/}" href="/">Emprestimos</a>
+          </div>
+        </div>
       </nav>
+      <!-- <nav th:fragment="menu" class="navbar container-xxl navbar-expand-lg ">
+        <div class="ABC" >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a  th:href="@{/home/}" class="nav-link" href="/">Biblioteca Pessoal</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a th:href="@{/home/}" class="nav-link" href="/">Biblioteca</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a th:href="@{/queroLer/}" class="nav-link" href="/">Quero ler</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a th:href="@{/estouLendo/}" class="nav-link" href="/">Estou lendo</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a th:href="@{/lidos/}" class="nav-link" href="/">Lidos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a th:href="@{/usuario/}" class="nav-link" href="/">Emprestimos</a>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
       <div class= "container">
         
         <form method="POST" class="mt-1">
